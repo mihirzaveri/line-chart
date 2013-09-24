@@ -1,0 +1,85 @@
+/************ TAGX dynamic tags ************************/
+
+(function() {
+var tagger = new TAGX.Tagger();
+tagger.tag().run(function() {window.bi_analytics_js_path = "//graphics8.nytimes.com/bi/js/analytics/nyt4/";;});
+tagger.tag().run(function() {
+if(undefined !== window._missingController) {
+	TAGX.Utils.includeFile("http://graphics8.nytimes.com/bi/js/analytics/nyt4/controller.js", false, "body", true, "loaded:controller.js");    
+};});
+tagger.define("page.dom.custom", function (callback) {
+    TAGX.$.domReady(function () {
+        callback(function (params, callback) {
+            if (params.length > 0) {
+                TAGX.$(document).one(params[0], function () {
+                    callback(true);
+                });
+            }
+        });
+    });
+}
+);
+tagger.tag().condition(function (callback) { TAGX.Ops.on.call(this, "page.dom.custom", ["loaded:controller.js"], callback); }).run(function() {// Set data for AudienceScience
+(function () {
+    var getMetaTag = function(tagName) {
+        var metaTags = document.getElementsByTagName("meta");
+        for (var i in metaTags) { 
+            if (metaTags[i].name == tagName) {
+                return metaTags[i].content;
+            }
+        }
+      return "";
+    }
+
+    var addCategory = function(category, valueToAppend) {
+        if (valueToAppend !== "") {
+            return category + " > " + valueToAppend;
+        } else {
+            return category;
+        }
+    }
+
+    window.DM_prepClient = function(csid, client) {
+        if ("H07707" == csid) {
+            var contentGroup = getMetaTag("WT.cg_n");
+            if (contentGroup != "Homepage") {
+                var catValue = "NYTimesglobal";
+                catValue = addCategory(catValue, contentGroup);
+                catValue = addCategory(catValue, getMetaTag("WT.cg_s"));
+                client.DM_cat(catValue);    
+            }
+        } // if H07707     
+    }
+
+    // AudienceScience script tag 
+    TAGX.Utils.includeFile("//js.revsci.net/gateway/gw.js?csid=H07707&auto=t", false, 'body', true, null);
+}());;});
+tagger.tag().run(function() {//var _missingEventTracker;
+if(undefined !== window._missingEventTracker) {
+	TAGX.Utils.includeFile("http://graphics8.nytimes.com/bi/js/analytics/EventTracker.js", false, 'body', true, "loaded:EventTracker.js"); 
+};});
+tagger.tag().run(function() {TAGX.$('<div id="BF_WIDGET_1">&nbsp;</div>').appendTo('body');
+(function () {
+  var
+    BF_WIDGET_JS,
+    BF_WIDGET_SRC;
+
+  BF_WIDGET_JS = document.createElement("script");
+  BF_WIDGET_JS.type = "text/javascript";
+  BF_WIDGET_SRC = "http://ct.buzzfeed.com/wd/UserWidget?u=nytimes.com&to=1&or=vb&wid=1&cb=" + (new Date()).getTime();
+  setTimeout(function () {document.getElementById("BF_WIDGET_1").appendChild(BF_WIDGET_JS); BF_WIDGET_JS.src = BF_WIDGET_SRC; }, 1);
+})();
+;});
+tagger.tag().run(function() {if(window._sf_async_config) {
+	var acct = "anon";
+	if (60567171 !== "") {
+		var subs = {"id":"60567171","subscriptions":"[{\"purchaseDate\": 1361250474000, \"subscriptionId\": 7666116, \"subscriberType\": \"Education\", \"bundle\": \"Bundle A (Web+SP)\", \"offerChainId\": 3356328937}]","isNewsSubscriber":1,"lastUpdate":1375236434000};
+		acct = "lgdin";
+		if (subs && subs.subscriptions && JSON.parse(subs.subscriptions).length > 0) {
+			acct = "paid";
+		} 
+	}
+	window._sf_async_config._acct = acct;
+}
+;});
+})();

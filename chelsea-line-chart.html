@@ -1,0 +1,327 @@
+
+<!-- saved from url=(0038)http://chelsimoy.github.io/line-chart/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css" media="screen">
+
+.title h4{
+	font-family: arial;
+	font-size: 18px;
+	padding: 0px 0px 0px 20px;
+
+}
+
+.title p{
+	font-size: 12px;
+	font-family: arial;
+	padding: 0px 0px 0px 20px;
+}
+
+.line {
+    fill: none;
+    stroke: orange;
+  }
+
+.xAxis line {
+	   fill: none;
+	   stroke: black;
+		 stroke-width: 1px;
+		opacity: 0.5;
+	}	
+
+.xAxis path{
+	 stroke-width: 1px;
+}	
+
+.xAxis text{
+	   font-family: arial;
+	   font-size: 10px;
+	   text-anchor: end;
+}	
+
+.yAxis line {
+	   fill: none;
+	   stroke: gray;
+	   stroke-dasharray: 2px 3px;
+		 opacity: 15;	
+		 shape-rendering: crispEdges;
+}
+
+.yAxis path{
+	display: none;
+}
+.xAxis .domain {
+	display: none;
+}
+
+.yAxis text{
+	font-family: arial;
+	font-size: 12px;
+	fill: #777;
+	text-anchor: end;
+}
+
+.dot{
+	fill: orange;
+}
+
+.tick line {
+	   stroke: black;
+	}	
+.tick {
+	   font-size: 3px;
+	}	
+.tick text{
+		 font-size: 10px;
+		 text-anchor: end;
+}	
+
+.totalAvg{
+	fill:none;
+	stroke: green;
+}
+
+.avg-dot{
+	fill:green;
+}
+
+.strikeout{
+	color: green;
+	text-shadow: 1px 1px 0px black;
+}
+.rise{
+	color: orange;
+	text-shadow: 1px 1px 0px black;
+}
+
+.legend{
+	stroke: orange;
+	font-family: arial;
+	font-size: 11px;
+	text-shadow: 1px 1px 0px black;
+}
+
+.legendAvg{
+	stroke: green;
+	font-family: arial;
+	font-size: 11px;
+	
+}
+
+.annotationline {
+	fill:none;
+	stroke: black;
+	opacity: 0.5;
+}
+
+.annotationtext{
+	stroke: black;
+	
+	font-family: arial;
+	font-size: 11px;
+	text-align: center;
+}
+	
+</style>
+
+<style type="text/css"></style><style id="bitmark_stylesheet" type="text/css"></style></head><body><div class="title">
+	<h4><span class="strikeout">Strikeouts</span> on the<span class="rise"> Rise</span></h4>
+	<p>How the Oakland A's compare to the league average in strikeouts per game</p> 
+</div>
+<div class="chart"><svg width="750" height="500"><g transform="translate(20,20)"><g class="xAxis" transform="translate(0, 460)"><g class="tick" transform="translate(0,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1900</text></g><g class="tick" transform="translate(63.39285714285713,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1910</text></g><g class="tick" transform="translate(126.78571428571426,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1920</text></g><g class="tick" transform="translate(190.17857142857142,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1930</text></g><g class="tick" transform="translate(253.57142857142853,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1940</text></g><g class="tick" transform="translate(316.96428571428567,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1950</text></g><g class="tick" transform="translate(380.35714285714283,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1960</text></g><g class="tick" transform="translate(443.75,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1970</text></g><g class="tick" transform="translate(507.14285714285705,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1980</text></g><g class="tick" transform="translate(570.5357142857142,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">1990</text></g><g class="tick" transform="translate(633.9285714285713,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">2000</text></g><g class="tick" transform="translate(697.3214285714286,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">2010</text></g><path class="domain" d="M0,6V0H710V6"></path></g><g class="yAxis" transform="translate(710, 0)"><g class="tick" transform="translate(0,460)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">0</text></g><g class="tick" transform="translate(0,411.26226291693916)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">1</text></g><g class="tick" transform="translate(0,362.52452583387833)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">2</text></g><g class="tick" transform="translate(0,313.78678875081755)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">3</text></g><g class="tick" transform="translate(0,265.0490516677567)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">4</text></g><g class="tick" transform="translate(0,216.3113145846959)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">5</text></g><g class="tick" transform="translate(0,167.57357750163504)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">6</text></g><g class="tick" transform="translate(0,118.83584041857426)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">7</text></g><g class="tick" transform="translate(0,70.09810333551343)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">8</text></g><g class="tick" transform="translate(0,21.360366252452593)" style="opacity: 1;"><line x2="-750" y2="0"></line><text x="3" y="0" dy=".32em" style="text-anchor: start;">9</text></g><path class="domain" d="M-750,0H0V460H-750"></path></g><circle class="dot" r="3" cx="6.3392857142857135" cy="337.6220324337743"></circle><circle class="dot" r="3" cx="12.678571428571427" cy="357.54402715385754"></circle><circle class="dot" r="3" cx="19.017857142857142" cy="278.2117981792403"></circle><circle class="dot" r="3" cx="25.357142857142854" cy="271.3377919365388"></circle><circle class="dot" r="3" cx="31.696428571428566" cy="254.4678324326185"></circle><circle class="dot" r="3" cx="38.035714285714285" cy="243.78762273890464"></circle><circle class="dot" r="3" cx="44.375" cy="282.2697187704382"></circle><circle class="dot" r="3" cx="50.71428571428571" cy="275.2932893985911"></circle><circle class="dot" r="3" cx="57.05357142857142" cy="276.1982072096334"></circle><circle class="dot" r="3" cx="63.39285714285713" cy="279.8275912993945"></circle><circle class="dot" r="3" cx="69.73214285714286" cy="294.2275653161681"></circle><circle class="dot" r="3" cx="76.07142857142857" cy="280.657869426384"></circle><circle class="dot" r="3" cx="82.41071428571428" cy="285.7546262455277"></circle><circle class="dot" r="3" cx="88.75" cy="300.5227210636554"></circle><circle class="dot" r="3" cx="95.08928571428571" cy="259.3524330476587"></circle><circle class="dot" r="3" cx="101.42857142857142" cy="260.3018694843417"></circle><circle class="dot" r="3" cx="107.76785714285714" cy="295.7474964538405"></circle><circle class="dot" r="3" cx="114.10714285714285" cy="278.17075011319616"></circle><circle class="dot" r="3" cx="120.44642857142856" cy="263.30841820050455"></circle><circle class="dot" r="3" cx="126.78571428571426" cy="280.35769985410275"></circle><circle class="dot" r="3" cx="133.125" cy="280.7709023397118"></circle><circle class="dot" r="3" cx="139.46428571428572" cy="274.4821620709298"></circle><circle class="dot" r="3" cx="145.80357142857142" cy="293.39976147424306"></circle><circle class="dot" r="3" cx="152.14285714285714" cy="306.0913565798079"></circle><circle class="dot" r="3" cx="158.48214285714283" cy="323.02466048551537"></circle><circle class="dot" r="3" cx="164.82142857142856" cy="313.13695225637673"></circle><circle class="dot" r="3" cx="171.16071428571428" cy="357.8079706322918"></circle><circle class="dot" r="3" cx="177.5" cy="321.43192397953294"></circle><circle class="dot" r="3" cx="183.8392857142857" cy="317.9827528705513"></circle><circle class="dot" r="3" cx="190.17857142857142" cy="291.9497507071085"></circle><circle class="dot" r="3" cx="196.5178571428571" cy="287.0288154503136"></circle><circle class="dot" r="3" cx="202.85714285714283" cy="260.93482710879704"></circle><circle class="dot" r="3" cx="209.19642857142858" cy="261.2013355822519"></circle><circle class="dot" r="3" cx="215.53571428571428" cy="273.6498288000615"></circle><circle class="dot" r="3" cx="221.875" cy="262.7593593215727"></circle><circle class="dot" r="3" cx="228.2142857142857" cy="272.6445431612208"></circle><circle class="dot" r="3" cx="234.55357142857142" cy="283.7213015891891"></circle><circle class="dot" r="3" cx="240.8928571428571" cy="273.27750078567607"></circle><circle class="dot" r="3" cx="247.23214285714283" cy="290.85138306467127"></circle><circle class="dot" r="3" cx="253.57142857142853" cy="252.70637799087768"></circle><circle class="dot" r="3" cx="259.9107142857143" cy="273.91045841013135"></circle><circle class="dot" r="3" cx="266.25" cy="305.24186082067047"></circle><circle class="dot" r="3" cx="272.58928571428567" cy="313.78678875081755"></circle><circle class="dot" r="3" cx="278.92857142857144" cy="305.92586341484"></circle><circle class="dot" r="3" cx="285.2678571428571" cy="313.4682414496211"></circle><circle class="dot" r="3" cx="291.60714285714283" cy="272.59553999029515"></circle><circle class="dot" r="3" cx="297.94642857142856" cy="284.10675655279977"></circle><circle class="dot" r="3" cx="304.2857142857143" cy="294.4815812049298"></circle><circle class="dot" r="3" cx="310.625" cy="303.97594557175984"></circle><circle class="dot" r="3" cx="316.96428571428567" cy="304.6089031962152"></circle><circle class="dot" r="3" cx="323.30357142857144" cy="281.5059499035954"></circle><circle class="dot" r="3" cx="329.6428571428571" cy="284.544146500981"></circle><circle class="dot" r="3" cx="335.98214285714283" cy="273.1202692738687"></circle><circle class="dot" r="3" cx="342.32142857142856" cy="248.49071791517835"></circle><circle class="dot" r="3" cx="348.6607142857143" cy="234.23422435072473"></circle><circle class="dot" r="3" cx="355" cy="230.55286113494094"></circle><circle class="dot" r="3" cx="361.33928571428567" cy="219.15962389474487"></circle><circle class="dot" r="3" cx="367.6785714285714" cy="226.62122050611262"></circle><circle class="dot" r="3" cx="374.01785714285717" cy="213.14652646241922"></circle><circle class="dot" r="3" cx="380.35714285714283" cy="226.05886200130806"></circle><circle class="dot" r="3" cx="386.69642857142856" cy="228.3453237410072"></circle><circle class="dot" r="3" cx="393.0357142857142" cy="218.4172661870504"></circle><circle class="dot" r="3" cx="399.375" cy="210.595160235448"></circle><circle class="dot" r="3" cx="405.71428571428567" cy="129.8990077319071"></circle><circle class="dot" r="3" cx="412.0535714285714" cy="153.13276651406147"></circle><circle class="dot" r="3" cx="418.39285714285717" cy="160.87213865271423"></circle><circle class="dot" r="3" cx="424.73214285714283" cy="151.5294777165281"></circle><circle class="dot" r="3" cx="431.07142857142856" cy="154.41737853442845"></circle><circle class="dot" r="3" cx="437.4107142857142" cy="173.28973185088296"></circle><circle class="dot" r="3" cx="443.75" cy="166.06932635709614"></circle><circle class="dot" r="3" cx="450.08928571428567" cy="151.83219658039798"></circle><circle class="dot" r="3" cx="456.4285714285714" cy="181.40880609295556"></circle><circle class="dot" r="3" cx="462.76785714285717" cy="183.51863963374757"></circle><circle class="dot" r="3" cx="469.10714285714283" cy="196.45519947678218"></circle><circle class="dot" r="3" cx="475.44642857142856" cy="205.4807063440157"></circle><circle class="dot" r="3" cx="481.7857142857142" cy="212.37596935438663"></circle><circle class="dot" r="3" cx="488.125" cy="184.52583387835188"></circle><circle class="dot" r="3" cx="494.46428571428567" cy="219.3198168737737"></circle><circle class="dot" r="3" cx="500.8035714285714" cy="234.0614780902551"></circle><circle class="dot" r="3" cx="507.14285714285705" cy="212.09941137998692"></circle><circle class="dot" r="3" cx="513.4821428571429" cy="170.70352391981328"></circle><circle class="dot" r="3" cx="519.8214285714286" cy="174.79398299542186"></circle><circle class="dot" r="3" cx="526.1607142857142" cy="197.65860039241335"></circle><circle class="dot" r="3" cx="532.5" cy="197.95945062132114"></circle><circle class="dot" r="3" cx="538.8392857142857" cy="200.96795291039894"></circle><circle class="dot" r="3" cx="545.1785714285713" cy="164.26422498364946"></circle><circle class="dot" r="3" cx="551.5178571428571" cy="142.30215827338134"></circle><circle class="dot" r="3" cx="557.8571428571429" cy="181.4126880313931"></circle><circle class="dot" r="3" cx="564.1964285714286" cy="202.77305428384568"></circle><circle class="dot" r="3" cx="570.5357142857142" cy="161.55657292347945"></circle><circle class="dot" r="3" cx="576.875" cy="164.86592544146504"></circle><circle class="dot" r="3" cx="583.2142857142857" cy="209.99345977763244"></circle><circle class="dot" r="3" cx="589.5535714285713" cy="144.70896010464355"></circle><circle class="dot" r="3" cx="595.8928571428571" cy="166.71852948263404"></circle><circle class="dot" r="3" cx="602.2321428571429" cy="151.66612164813603"></circle><circle class="dot" r="3" cx="608.5714285714286" cy="124.85284499672991"></circle><circle class="dot" r="3" cx="614.9107142857142" cy="104.69587965990848"></circle><circle class="dot" r="3" cx="621.25" cy="122.44604316546764"></circle><circle class="dot" r="3" cx="627.5892857142857" cy="120.34009156311316"></circle><circle class="dot" r="3" cx="633.9285714285713" cy="109.14883677473608"></circle><circle class="dot" r="3" cx="640.2678571428571" cy="152.83191628515368"></circle><circle class="dot" r="3" cx="646.6071428571429" cy="156.7429692609549"></circle><circle class="dot" r="3" cx="652.9464285714286" cy="189.836494440811"></circle><circle class="dot" r="3" cx="659.2857142857142" cy="140.79790712884238"></circle><circle class="dot" r="3" cx="665.625" cy="213.60366252452584"></circle><circle class="dot" r="3" cx="671.9642857142857" cy="166.37017658600394"></circle><circle class="dot" r="3" cx="678.3035714285713" cy="123.34859385219102"></circle><circle class="dot" r="3" cx="684.6428571428571" cy="88.86667289544988"></circle><circle class="dot" r="3" cx="690.9821428571429" cy="145.31066056245913"></circle><circle class="dot" r="3" cx="697.3214285714286" cy="140.79790712884238"></circle><circle class="dot" r="3" cx="703.6607142857142" cy="130.86984957488556"></circle><circle class="dot" r="3" cx="710" cy="42.720732504905186"></circle><path class="line" d="M6.3392857142857135,337.6220324337743L12.678571428571427,357.54402715385754L19.017857142857142,278.2117981792403L25.357142857142854,271.3377919365388L31.696428571428566,254.4678324326185L38.035714285714285,243.78762273890464L44.375,282.2697187704382L50.71428571428571,275.2932893985911L57.05357142857142,276.1982072096334L63.39285714285713,279.8275912993945L69.73214285714286,294.2275653161681L76.07142857142857,280.657869426384L82.41071428571428,285.7546262455277L88.75,300.5227210636554L95.08928571428571,259.3524330476587L101.42857142857142,260.3018694843417L107.76785714285714,295.7474964538405L114.10714285714285,278.17075011319616L120.44642857142856,263.30841820050455L126.78571428571426,280.35769985410275L133.125,280.7709023397118L139.46428571428572,274.4821620709298L145.80357142857142,293.39976147424306L152.14285714285714,306.0913565798079L158.48214285714283,323.02466048551537L164.82142857142856,313.13695225637673L171.16071428571428,357.8079706322918L177.5,321.43192397953294L183.8392857142857,317.9827528705513L190.17857142857142,291.9497507071085L196.5178571428571,287.0288154503136L202.85714285714283,260.93482710879704L209.19642857142858,261.2013355822519L215.53571428571428,273.6498288000615L221.875,262.7593593215727L228.2142857142857,272.6445431612208L234.55357142857142,283.7213015891891L240.8928571428571,273.27750078567607L247.23214285714283,290.85138306467127L253.57142857142853,252.70637799087768L259.9107142857143,273.91045841013135L266.25,305.24186082067047L272.58928571428567,313.78678875081755L278.92857142857144,305.92586341484L285.2678571428571,313.4682414496211L291.60714285714283,272.59553999029515L297.94642857142856,284.10675655279977L304.2857142857143,294.4815812049298L310.625,303.97594557175984L316.96428571428567,304.6089031962152L323.30357142857144,281.5059499035954L329.6428571428571,284.544146500981L335.98214285714283,273.1202692738687L342.32142857142856,248.49071791517835L348.6607142857143,234.23422435072473L355,230.55286113494094L361.33928571428567,219.15962389474487L367.6785714285714,226.62122050611262L374.01785714285717,213.14652646241922L380.35714285714283,226.05886200130806L386.69642857142856,228.3453237410072L393.0357142857142,218.4172661870504L399.375,210.595160235448L405.71428571428567,129.8990077319071L412.0535714285714,153.13276651406147L418.39285714285717,160.87213865271423L424.73214285714283,151.5294777165281L431.07142857142856,154.41737853442845L437.4107142857142,173.28973185088296L443.75,166.06932635709614L450.08928571428567,151.83219658039798L456.4285714285714,181.40880609295556L462.76785714285717,183.51863963374757L469.10714285714283,196.45519947678218L475.44642857142856,205.4807063440157L481.7857142857142,212.37596935438663L488.125,184.52583387835188L494.46428571428567,219.3198168737737L500.8035714285714,234.0614780902551L507.14285714285705,212.09941137998692L513.4821428571429,170.70352391981328L519.8214285714286,174.79398299542186L526.1607142857142,197.65860039241335L532.5,197.95945062132114L538.8392857142857,200.96795291039894L545.1785714285713,164.26422498364946L551.5178571428571,142.30215827338134L557.8571428571429,181.4126880313931L564.1964285714286,202.77305428384568L570.5357142857142,161.55657292347945L576.875,164.86592544146504L583.2142857142857,209.99345977763244L589.5535714285713,144.70896010464355L595.8928571428571,166.71852948263404L602.2321428571429,151.66612164813603L608.5714285714286,124.85284499672991L614.9107142857142,104.69587965990848L621.25,122.44604316546764L627.5892857142857,120.34009156311316L633.9285714285713,109.14883677473608L640.2678571428571,152.83191628515368L646.6071428571429,156.7429692609549L652.9464285714286,189.836494440811L659.2857142857142,140.79790712884238L665.625,213.60366252452584L671.9642857142857,166.37017658600394L678.3035714285713,123.34859385219102L684.6428571428571,88.86667289544988L690.9821428571429,145.31066056245913L697.3214285714286,140.79790712884238L703.6607142857142,130.86984957488556L710,42.720732504905186"></path><path class="totalAvg" d="M6.3392857142857135,306.8493450939494L12.678571428571427,315.4011990212502L19.017857142857142,286.4210306310199L25.357142857142854,278.94067248566677L31.696428571428566,271.668243122853L38.035714285714285,279.4957424643643L44.375,289.04240641992044L50.71428571428571,282.5029599237885L57.05357142857142,276.3203897361197L63.39285714285713,270.82421987295527L69.73214285714286,265.46275113370024L76.07142857142857,267.16550372452923L82.41071428571428,276.68054564746615L88.75,270.5204059103615L95.08928571428571,272.1737650405415L101.42857142857142,273.68661373299847L107.76785714285714,290.37547799480035L114.10714285714285,317.8882420191263L120.44642857142856,310.71343413153687L126.78571428571426,316.8872039542375L133.125,322.0154953779413L139.46428571428572,323.1957703040094L145.80357142857142,321.2377728871979L152.14285714285714,328.49521224907676L158.48214285714283,327.73737066017895L164.82142857142856,326.16870169695983L171.16071428571428,324.1770749331691L177.5,319.4682390119217L183.8392857142857,321.55944657692L190.17857142857142,303.32041895583285L196.5178571428571,304.362582308381L202.85714285714283,304.3001245983969L209.19642857142858,312.03763668584634L215.53571428571428,291.98830781505774L221.875,301.1657786592757L228.2142857142857,297.9017508566212L234.55357142857142,282.9667588843299L240.8928571428571,293.9210798907146L247.23214285714283,291.71425550645813L253.57142857142853,281.5907027246693L259.9107142857143,287.06722549467L266.25,294.2558573462086L272.58928571428567,291.819375752152L278.92857142857144,299.3852190974493L285.2678571428571,300.611750067795L291.60714285714283,269.7187704381949L297.94642857142856,280.4780939382189L304.2857142857143,282.3850292882472L310.625,284.0921432941623L316.96428571428567,271.9384733071231L323.30357142857144,276.39758851074544L329.6428571428571,255.84434587483L335.98214285714283,259.29092385915317L342.32142857142856,258.7647597803289L348.6607142857143,246.6440391226138L355,233.7176492572176L361.33928571428567,224.22379740668268L367.6785714285714,218.77779925489125L374.01785714285717,211.90208473550138L380.35714285714283,207.34057414262767L386.69642857142856,205.2856796571643L393.0357142857142,195.9112192047719L399.375,177.43250825809116L405.71428571428567,172.06967870855954L412.0535714285714,170.4714158432958L418.39285714285717,176.2498000473812L424.73214285714283,167.97972531066057L431.07142857142856,172.92723046737433L437.4107142857142,178.58089273699233L443.75,179.53237410071944L450.08928571428567,196.4943193207888L456.4285714285714,188.41623537201343L462.76785714285717,204.67245199769633L469.10714285714283,215.74751042820805L475.44642857142856,217.06732912062753L481.7857142857142,224.4175137643179L488.125,208.2926474279013L494.46428571428567,227.46395565841246L500.8035714285714,227.39862733227164L507.14285714285705,226.01255536274934L513.4821428571429,228.6006363814648L519.8214285714286,214.56489828200435L526.1607142857142,209.07807053206525L532.5,199.52515810715715L538.8392857142857,199.8452365069428L545.1785714285713,173.71504223155L551.5178571428571,169.43741970362385L557.8571428571429,188.9833691488368L564.1964285714286,186.3420033204206L570.5357142857142,183.86193761466757L576.875,177.51107237265842L583.2142857142857,187.63797353725414L589.5535714285713,177.43282004069408L595.8928571428571,158.95309025506867L602.2321428571429,152.82177359027725L608.5714285714286,144.95685963159536L614.9107142857142,138.05347858437955L621.25,140.42914292967544L627.5892857142857,147.67099664584646L633.9285714285713,145.42188473107143L640.2678571428571,134.90785664069517L646.6071428571429,144.65117106644448L652.9464285714286,151.11706998037937L659.2857142857142,140.5550461532826L665.625,152.81793188537318L671.9642857142857,142.42217633505754L678.3035714285713,137.33051851776122L684.6428571428571,129.95639492599423L690.9821428571429,123.13799869195554L697.3214285714286,115.9677349029867L703.6607142857142,114.00019009456531L710,94.70765206017006"></path><circle class="avg-dot" r="3" cx="6.3392857142857135" cy="306.8493450939494"></circle><circle class="avg-dot" r="3" cx="12.678571428571427" cy="315.4011990212502"></circle><circle class="avg-dot" r="3" cx="19.017857142857142" cy="286.4210306310199"></circle><circle class="avg-dot" r="3" cx="25.357142857142854" cy="278.94067248566677"></circle><circle class="avg-dot" r="3" cx="31.696428571428566" cy="271.668243122853"></circle><circle class="avg-dot" r="3" cx="38.035714285714285" cy="279.4957424643643"></circle><circle class="avg-dot" r="3" cx="44.375" cy="289.04240641992044"></circle><circle class="avg-dot" r="3" cx="50.71428571428571" cy="282.5029599237885"></circle><circle class="avg-dot" r="3" cx="57.05357142857142" cy="276.3203897361197"></circle><circle class="avg-dot" r="3" cx="63.39285714285713" cy="270.82421987295527"></circle><circle class="avg-dot" r="3" cx="69.73214285714286" cy="265.46275113370024"></circle><circle class="avg-dot" r="3" cx="76.07142857142857" cy="267.16550372452923"></circle><circle class="avg-dot" r="3" cx="82.41071428571428" cy="276.68054564746615"></circle><circle class="avg-dot" r="3" cx="88.75" cy="270.5204059103615"></circle><circle class="avg-dot" r="3" cx="95.08928571428571" cy="272.1737650405415"></circle><circle class="avg-dot" r="3" cx="101.42857142857142" cy="273.68661373299847"></circle><circle class="avg-dot" r="3" cx="107.76785714285714" cy="290.37547799480035"></circle><circle class="avg-dot" r="3" cx="114.10714285714285" cy="317.8882420191263"></circle><circle class="avg-dot" r="3" cx="120.44642857142856" cy="310.71343413153687"></circle><circle class="avg-dot" r="3" cx="126.78571428571426" cy="316.8872039542375"></circle><circle class="avg-dot" r="3" cx="133.125" cy="322.0154953779413"></circle><circle class="avg-dot" r="3" cx="139.46428571428572" cy="323.1957703040094"></circle><circle class="avg-dot" r="3" cx="145.80357142857142" cy="321.2377728871979"></circle><circle class="avg-dot" r="3" cx="152.14285714285714" cy="328.49521224907676"></circle><circle class="avg-dot" r="3" cx="158.48214285714283" cy="327.73737066017895"></circle><circle class="avg-dot" r="3" cx="164.82142857142856" cy="326.16870169695983"></circle><circle class="avg-dot" r="3" cx="171.16071428571428" cy="324.1770749331691"></circle><circle class="avg-dot" r="3" cx="177.5" cy="319.4682390119217"></circle><circle class="avg-dot" r="3" cx="183.8392857142857" cy="321.55944657692"></circle><circle class="avg-dot" r="3" cx="190.17857142857142" cy="303.32041895583285"></circle><circle class="avg-dot" r="3" cx="196.5178571428571" cy="304.362582308381"></circle><circle class="avg-dot" r="3" cx="202.85714285714283" cy="304.3001245983969"></circle><circle class="avg-dot" r="3" cx="209.19642857142858" cy="312.03763668584634"></circle><circle class="avg-dot" r="3" cx="215.53571428571428" cy="291.98830781505774"></circle><circle class="avg-dot" r="3" cx="221.875" cy="301.1657786592757"></circle><circle class="avg-dot" r="3" cx="228.2142857142857" cy="297.9017508566212"></circle><circle class="avg-dot" r="3" cx="234.55357142857142" cy="282.9667588843299"></circle><circle class="avg-dot" r="3" cx="240.8928571428571" cy="293.9210798907146"></circle><circle class="avg-dot" r="3" cx="247.23214285714283" cy="291.71425550645813"></circle><circle class="avg-dot" r="3" cx="253.57142857142853" cy="281.5907027246693"></circle><circle class="avg-dot" r="3" cx="259.9107142857143" cy="287.06722549467"></circle><circle class="avg-dot" r="3" cx="266.25" cy="294.2558573462086"></circle><circle class="avg-dot" r="3" cx="272.58928571428567" cy="291.819375752152"></circle><circle class="avg-dot" r="3" cx="278.92857142857144" cy="299.3852190974493"></circle><circle class="avg-dot" r="3" cx="285.2678571428571" cy="300.611750067795"></circle><circle class="avg-dot" r="3" cx="291.60714285714283" cy="269.7187704381949"></circle><circle class="avg-dot" r="3" cx="297.94642857142856" cy="280.4780939382189"></circle><circle class="avg-dot" r="3" cx="304.2857142857143" cy="282.3850292882472"></circle><circle class="avg-dot" r="3" cx="310.625" cy="284.0921432941623"></circle><circle class="avg-dot" r="3" cx="316.96428571428567" cy="271.9384733071231"></circle><circle class="avg-dot" r="3" cx="323.30357142857144" cy="276.39758851074544"></circle><circle class="avg-dot" r="3" cx="329.6428571428571" cy="255.84434587483"></circle><circle class="avg-dot" r="3" cx="335.98214285714283" cy="259.29092385915317"></circle><circle class="avg-dot" r="3" cx="342.32142857142856" cy="258.7647597803289"></circle><circle class="avg-dot" r="3" cx="348.6607142857143" cy="246.6440391226138"></circle><circle class="avg-dot" r="3" cx="355" cy="233.7176492572176"></circle><circle class="avg-dot" r="3" cx="361.33928571428567" cy="224.22379740668268"></circle><circle class="avg-dot" r="3" cx="367.6785714285714" cy="218.77779925489125"></circle><circle class="avg-dot" r="3" cx="374.01785714285717" cy="211.90208473550138"></circle><circle class="avg-dot" r="3" cx="380.35714285714283" cy="207.34057414262767"></circle><circle class="avg-dot" r="3" cx="386.69642857142856" cy="205.2856796571643"></circle><circle class="avg-dot" r="3" cx="393.0357142857142" cy="195.9112192047719"></circle><circle class="avg-dot" r="3" cx="399.375" cy="177.43250825809116"></circle><circle class="avg-dot" r="3" cx="405.71428571428567" cy="172.06967870855954"></circle><circle class="avg-dot" r="3" cx="412.0535714285714" cy="170.4714158432958"></circle><circle class="avg-dot" r="3" cx="418.39285714285717" cy="176.2498000473812"></circle><circle class="avg-dot" r="3" cx="424.73214285714283" cy="167.97972531066057"></circle><circle class="avg-dot" r="3" cx="431.07142857142856" cy="172.92723046737433"></circle><circle class="avg-dot" r="3" cx="437.4107142857142" cy="178.58089273699233"></circle><circle class="avg-dot" r="3" cx="443.75" cy="179.53237410071944"></circle><circle class="avg-dot" r="3" cx="450.08928571428567" cy="196.4943193207888"></circle><circle class="avg-dot" r="3" cx="456.4285714285714" cy="188.41623537201343"></circle><circle class="avg-dot" r="3" cx="462.76785714285717" cy="204.67245199769633"></circle><circle class="avg-dot" r="3" cx="469.10714285714283" cy="215.74751042820805"></circle><circle class="avg-dot" r="3" cx="475.44642857142856" cy="217.06732912062753"></circle><circle class="avg-dot" r="3" cx="481.7857142857142" cy="224.4175137643179"></circle><circle class="avg-dot" r="3" cx="488.125" cy="208.2926474279013"></circle><circle class="avg-dot" r="3" cx="494.46428571428567" cy="227.46395565841246"></circle><circle class="avg-dot" r="3" cx="500.8035714285714" cy="227.39862733227164"></circle><circle class="avg-dot" r="3" cx="507.14285714285705" cy="226.01255536274934"></circle><circle class="avg-dot" r="3" cx="513.4821428571429" cy="228.6006363814648"></circle><circle class="avg-dot" r="3" cx="519.8214285714286" cy="214.56489828200435"></circle><circle class="avg-dot" r="3" cx="526.1607142857142" cy="209.07807053206525"></circle><circle class="avg-dot" r="3" cx="532.5" cy="199.52515810715715"></circle><circle class="avg-dot" r="3" cx="538.8392857142857" cy="199.8452365069428"></circle><circle class="avg-dot" r="3" cx="545.1785714285713" cy="173.71504223155"></circle><circle class="avg-dot" r="3" cx="551.5178571428571" cy="169.43741970362385"></circle><circle class="avg-dot" r="3" cx="557.8571428571429" cy="188.9833691488368"></circle><circle class="avg-dot" r="3" cx="564.1964285714286" cy="186.3420033204206"></circle><circle class="avg-dot" r="3" cx="570.5357142857142" cy="183.86193761466757"></circle><circle class="avg-dot" r="3" cx="576.875" cy="177.51107237265842"></circle><circle class="avg-dot" r="3" cx="583.2142857142857" cy="187.63797353725414"></circle><circle class="avg-dot" r="3" cx="589.5535714285713" cy="177.43282004069408"></circle><circle class="avg-dot" r="3" cx="595.8928571428571" cy="158.95309025506867"></circle><circle class="avg-dot" r="3" cx="602.2321428571429" cy="152.82177359027725"></circle><circle class="avg-dot" r="3" cx="608.5714285714286" cy="144.95685963159536"></circle><circle class="avg-dot" r="3" cx="614.9107142857142" cy="138.05347858437955"></circle><circle class="avg-dot" r="3" cx="621.25" cy="140.42914292967544"></circle><circle class="avg-dot" r="3" cx="627.5892857142857" cy="147.67099664584646"></circle><circle class="avg-dot" r="3" cx="633.9285714285713" cy="145.42188473107143"></circle><circle class="avg-dot" r="3" cx="640.2678571428571" cy="134.90785664069517"></circle><circle class="avg-dot" r="3" cx="646.6071428571429" cy="144.65117106644448"></circle><circle class="avg-dot" r="3" cx="652.9464285714286" cy="151.11706998037937"></circle><circle class="avg-dot" r="3" cx="659.2857142857142" cy="140.5550461532826"></circle><circle class="avg-dot" r="3" cx="665.625" cy="152.81793188537318"></circle><circle class="avg-dot" r="3" cx="671.9642857142857" cy="142.42217633505754"></circle><circle class="avg-dot" r="3" cx="678.3035714285713" cy="137.33051851776122"></circle><circle class="avg-dot" r="3" cx="684.6428571428571" cy="129.95639492599423"></circle><circle class="avg-dot" r="3" cx="690.9821428571429" cy="123.13799869195554"></circle><circle class="avg-dot" r="3" cx="697.3214285714286" cy="115.9677349029867"></circle><circle class="avg-dot" r="3" cx="703.6607142857142" cy="114.00019009456531"></circle><circle class="avg-dot" r="3" cx="710" cy="94.70765206017006"></circle><text class="legend" x="0" y="0">Oakland Athletics</text><text class="legendAvg" x="0" y="15">League Average</text><line class="annotationline" x1="405.71428571428567" y1="45.72923479398304" x2="405.71428571428567" y2="118.83584041857426"></line><text class="annotationtext" x="335.98214285714283" y="40.85546108567695">Athletics fire Manager Ed Lopat</text><line class="annotationline" x1="431.07142857142856" y1="191.9424460431655" x2="431.07142857142856" y2="313.78678875081755"></line><text class="annotationtext" x="380.35714285714283" y="328.40810987573576">Athletics move to Oakland, CA</text></g></svg></div>
+	
+<script src="./chelsea-line-chart_files/d3.v3.min.js" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+	
+	
+					
+	// var svg = d3.select('.chart')
+	// 				.append("svg")
+	// 				.attr("width", width)
+	// 				.attr("height", height);
+					
+var margin = {top: 20, right: 20, bottom: 20, left: 20};
+var	 width = 750 - margin.left - margin.right,
+	   height = 500 - margin.top - margin.bottom;
+ 
+ // var width = 900;
+ // var height = 500;
+
+	var svg = d3.select(".chart").append("svg")
+	    .attr("width", width + margin.left + margin.right)
+	    .attr("height", height + margin.top + margin.bottom)
+	    .append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		
+	var xScale = d3.scale.linear()
+		  .domain([1900, 2012])
+      .range([0, width]);
+
+	var yScale = d3.scale.linear()
+			.range([height, 0])
+
+	var xAxis = d3.svg.axis()
+		  .tickFormat(function(d) {return d;})
+			.scale(xScale)
+			.orient("bottom");
+
+	var yAxis = d3.svg.axis()
+			.tickFormat(function(d) {return d;})
+			.scale(yScale)
+			.orient("right")
+			.tickSize(-width - margin.left - margin.right);
+
+	
+d3.csv("strikeouts.csv", function(data) {
+	
+	data.forEach(function(d){
+			d.strikeouts = parseFloat(d.so);
+			d.year = +d.year; 
+			d.games = +d.g;
+			d.kpg = d.so / d.g;
+		});
+		
+	  yScale.domain([0, d3.max(data, function(d) {return d.kpg; })]);
+	
+
+		var oaklandData = data.filter(function(d) { return d.franchise == "OAK"; });
+
+		
+		// in here
+		var line = d3.svg.line()
+				.x(function(d) {return xScale(d.year);})	
+				.y(function(d) {return yScale(d.kpg);}); 
+			
+		var avgLine = d3.svg.line()
+				.x(function(d) {return xScale(d.key);})	
+				.y(function(d) {return yScale(d.values.totalAvg);});			
+		
+		svg.append("g")
+				.attr("class", "xAxis")
+		  	.attr("transform", "translate(0, " + height + ")")
+				.call(xAxis);
+		
+		svg.append("g")
+				.attr("class", "yAxis")
+				.attr("transform", "translate(" + width + ", 0)")
+				.call(yAxis);
+				
+	  svg.selectAll(".dot") 
+			.data(oaklandData)
+		.enter().append("circle")
+		  	.attr("class", "dot")
+				.attr("r", 3)
+				.attr("cx", function(d, i) { return xScale(d.year); })
+				.attr("cy", function(d) { return yScale(d.kpg); });
+				
+		svg.append("path")
+				.attr("class", "line")
+				.attr("d", line(oaklandData));
+				
+		var	nested = d3.nest()
+				.key(function(d) { return d.year; })
+			  .rollup(function(values) { return {
+				     totalSO: d3.sum(values, function(d) { return d.so }),
+						 totalGames: d3.sum(values, function(d) {return d.g }),
+						 totalAvg: d3.sum(values, function(d) {return d.so }) / d3.sum(values, function(d) {return d.g })	
+				    };
+				  })
+				
+				  .entries(data);
+				
+		svg.append("path")
+				.attr("class", "totalAvg")
+				.attr("d", avgLine(nested));
+					
+					
+		svg.selectAll(".avg-dot") 
+				.data(nested)
+			.enter().append("circle")
+				.attr("class", "avg-dot")
+				.attr("r", 3)
+				.attr("cx", function(d, i) { return xScale(d.key); })
+			 	.attr("cy", function(d) { return yScale(d.values.totalAvg); });	
+					
+					
+		svg.append("text")
+				.attr("class", "legend")
+				.attr("x", 0)
+				.attr("y", 0)
+				.text("Oakland Athletics");
+				
+		svg.append ("text")
+				.attr("class", "legendAvg")
+				.attr("x", 0)
+				.attr("y", 15)
+				.text("League Average");
+					
+		svg.append("line")
+				.attr("class", "annotationline")
+				.attr("x1",  xScale(1964))
+				.attr("y1",  yScale(8.5))
+				.attr("x2", xScale(1964))
+				.attr("y2", yScale(7.0));
+				
+		svg.append("text")
+				.attr("class", "annotationtext")
+				.attr("x",     xScale(1953))
+				.attr("y",     yScale(8.6))
+				.text( "Athletics fire Manager Ed Lopat");
+	
+		svg.append("line")
+				.attr("class", "annotationline")
+				.attr("x1",  xScale(1968))
+				.attr("y1",  yScale(5.5))
+				.attr("x2", xScale(1968))
+				.attr("y2", yScale(3.0));
+
+		svg.append("text")
+				.attr("class", "annotationtext")
+				.attr("x",     xScale(1960))
+				.attr("y",     yScale(2.7))
+				.text( "Athletics move to Oakland, CA");			
+					
+							
+			});
+			
+			
+ // d3.select(".chart").append("button").text("Blamo!").on("click", function() {
+ // 				  d3.selectAll("circle")
+ // 						        .transition()
+ // 						        .duration(2000)
+ // 						        .ease("bounce")
+ // 						        .delay(function(d, i){ return i * 50})
+ // 						        .attr("cy", height)
+ // 						        .attr("r", 7);
+ // 						});
+
+
+
+// var avgLine = data.filter(function(d) { return  ;}));
+// 			svg.append("path")
+// 			.attr("class", "avgKpg")
+// 			.attr("d", line(avgLine))
+// 		function updateLine(code) {
+// var thisData = data.filter(function(d) {return d.franchise == code;});
+// 		  d3.selectAll(".dot")
+// 			.transition()
+// 			.attr("d", line(avgLine))	
+// 		};
+
+
+// d3.selectAll(".")
+// 			.key(function(d) {return d.kpg; })
+// 			.rollup(function(d) {return d.year})
+// 			.map(nest);
+// 			
+// 		svg.selectAll("circle")
+// 		.data(nest).enter()
+// 			.append("circle")
+// 			.attr("class", "avg")
+// 			.attr("r", 3)
+// 			.attr("cx", function(d, i) { return xScale(d.year); })
+// 			.attr("cy", function(d) { return yScale(d.kpg); });
+
+		
+
+</script>
+</body></html>
