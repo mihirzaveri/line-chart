@@ -22,10 +22,10 @@
 
           .franchiseLink{
             font-family: arial, sans-serif;
-            font-size: 12px;
+            font-size: 10px;
             color: #666;
             cursor: pointer;
-            padding:5px;
+            padding:4px;
           }
 
           .user-chosen-franchise  {
@@ -106,7 +106,17 @@
           #intro_text{
             font-size: 12px;
             font-family: Georgia, serif;
-            color: #666;
+            color: #000;
+          }
+
+          .choices{
+            top:107px;
+            left:911px;
+            position: absolute;
+          }
+
+          .svg_box{
+            padding:10px;
           }
 
         </style>
@@ -117,13 +127,9 @@
       <p id ="intro_text">Here's a chart that shows the increasing number of strikeouts in the MLB, which in 2012 reached unprecedented levels. Click on each team to see how their strikeout number has changed over time compared to the average.</p>
         
       <div class="chart"> 
+      </div>
 
-      <!--CHOICES -->
-        <div id="franchiseList">
-          <div class="franchiseLink" id="OAK">Oakland Athletics</div>
-          <div class="franchiseLink" id="BAL">Baltimore Ravens</div>
-        </div>
-
+      <div class="choices">
       </div>
 
       <script type="text/javascript">
@@ -138,7 +144,8 @@
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .attr("classed","svg_box");
 
         //THIS SECTION IS THE CODE NECESSARY TO DISPLAY THE AVERAGE LINE AT ALL TIMES
         d3.csv("league_average.csv", function(data){
@@ -202,7 +209,7 @@
 
             var uniqKeys = nested.map(function(d) { return d.key});
 
-            var links = d3.select("body").selectAll(".link")
+            var links = d3.select(".choices").selectAll(".link")
             .data(uniqKeys)
             .enter()
             .append("div")
@@ -289,14 +296,6 @@
               .attr("transform", "translate(" + width + ",0)")
               .call(yAxis);
 
-              //AXES LABELS
-
-            svg.append("text")
-                .attr("class", "x label")
-                .attr("text-anchor", "end")
-                .attr("x", width)
-                .attr("y", height + 6)
-                .text("Year");
 
         console.log(data);
         console.log(oakData);
