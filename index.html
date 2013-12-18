@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>D3 Test</title>
+        <title>Strikeouts On The Rise: Recreating NYT Graphic</title>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
         <style type="text/css">
 
@@ -16,13 +16,21 @@
 
           .franchise-line {
             fill: none;
-            stroke: #5E7F9C;
+            stroke: #CFB52B;
             stroke-width: 2px;
+          }
+
+          .franchiseLink{
+            font-family: arial, sans-serif;
+            font-size: 12px;
+            color: #666;
+            cursor: pointer;
+            padding:5px;
           }
 
           .user-chosen-franchise  {
             fill: none;
-            stroke: #5E7F9C;
+            stroke: #CFB52B;
             stroke-width: 2px;
           }
 
@@ -30,6 +38,7 @@
             fill: none;
             stroke: #5B5C5E;
             stroke-width: 2px;
+            opacity: .5;
           }
 
           .domain {
@@ -77,9 +86,10 @@
           }
 
           .tick line {
-              stroke:#000;
+              stroke:#ccc;
               stroke-dasharray: 2px 3px;
             } 
+
           .tick {
                font-size: 3px;
             } 
@@ -88,16 +98,27 @@
                text-anchor: end;
           } 
 
+          #title{
+            font-size: 24px;
+            font-family: Georgia, serif;
+          }
+
+          #intro_text{
+            font-size: 12px;
+            font-family: Georgia, serif;
+            color: #666;
+          }
+
         </style>
     </head>
     <body>
 
-      <h1>Strikeouts on the Rise</h1>
-      <p>Strikeouts are on the rise.</p>
+      <h1 id="title">Strikeouts on the Rise</h1>
+      <p id ="intro_text">Here's a chart that shows the increasing number of strikeouts in the MLB, which in 2012 reached unprecedented levels. Click on each team to see how their strikeout number has changed over time compared to the average.</p>
         
       <div class="chart"> 
 
-      <!--DROPDOWN MENU-->
+      <!--CHOICES -->
         <div id="franchiseList">
           <div class="franchiseLink" id="OAK">Oakland Athletics</div>
           <div class="franchiseLink" id="BAL">Baltimore Ravens</div>
@@ -172,6 +193,22 @@
                 d.kpg = d.so / d.g;
 
             });
+
+            window.data = data;
+
+            nested = d3.nest()
+                .key(function(d) { return d.franchise; })
+                .entries(data);
+
+            var uniqKeys = nested.map(function(d) { return d.key});
+
+            var links = d3.select("body").selectAll(".link")
+            .data(uniqKeys)
+            .enter()
+            .append("div")
+            .text(function(d) { return d;})
+            .attr("id", function(d) { return d;})
+            .attr("class", "franchiseLink")
 
             //SCALES
 
@@ -251,6 +288,15 @@
               .attr("class", "axis")
               .attr("transform", "translate(" + width + ",0)")
               .call(yAxis);
+
+              //AXES LABELS
+
+            svg.append("text")
+                .attr("class", "x label")
+                .attr("text-anchor", "end")
+                .attr("x", width)
+                .attr("y", height + 6)
+                .text("Year");
 
         console.log(data);
         console.log(oakData);
